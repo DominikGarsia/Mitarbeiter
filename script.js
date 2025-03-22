@@ -13,3 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }, { passive: false });
     }
 });
+
+document.getElementById("scrollLeft").addEventListener("click", function () {
+    document.querySelector(".cards-container").scrollLeft -= 300;
+});
+
+document.getElementById("scrollRight").addEventListener("click", function () {
+    document.querySelector(".cards-container").scrollLeft += 300;
+});
