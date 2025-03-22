@@ -8,42 +8,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-
     <header>
         <h1>Finden Sie Ihren idealen Mitarbeiter</h1>
     </header>
 
+    <!-- Контейнер для горизонтального свайпа -->
     <section class="gallery">
-        <div class="card" onclick="openResume('resume1.html')">
-            <img src="img/worker1.jpg" alt="Работник 1">
-            <h2>Roberto Karlos</h2>
-            <p>Designer UX/UI</p>
+        <div class="cards-container">
+            <div class="card" onclick="openResume('resume1.html')">
+                <img src="img/worker1.jpg" alt="Работник 1">
+                <h2>Roberto Karlos</h2>
+                <p>Designer UX/UI</p>
+            </div>
+            <div class="card" onclick="openResume('resume2.html')">
+                <img src="img/worker2.jpg" alt="Работник 2">
+                <h2>Dominika Gonsales</h2>
+                <p>Webentwickler</p>
+            </div>
+            <div class="card" onclick="openResume('resume3.html')">
+                <img src="img/worker3.jpg" alt="Работник 3">
+                <h2>Jozel Brinks</h2>
+                <p>Fotograf</p>
+            </div>
         </div>
-
-        <div class="card" onclick="openResume('resume2.html')">
-            <img src="img/worker2.jpg" alt="Работник 2">
-            <h2>Dominika Gonsales</h2>
-            <p>Webentwickler</p>
-        </div>
-
-        <div class="card" onclick="openResume('resume3.html')">
-            <img src="img/worker3.jpg" alt="Работник 3">
-            <h2>Jozel Brinks</h2>
-            <p>Fotograf</p>
-        </div>
-        
-        <div class="logo-container">
-            <img src="img/clover.png"
-            alt="Логотип" class="logo">
-        </div>
-        
-        <!--<div class="social-icons">
-        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://tinder.com" target="_blank"><i class="fab fa-tinder"></i></a>
-    </div>-->
-
     </section>
+
+    <!-- Логотип -->
+    <div class="logo-container">
+        <img src="img/clover.png" alt="Логотип" class="logo">
+    </div>
 
     <script src="script.js"></script>
 </body>
