@@ -38,32 +38,30 @@ header {
     margin: 20px;
 }
 
+/* Контейнер с карточками */
 .cards-container {
     display: flex;
-    flex-wrap: wrap;  /* Позволяет переносить элементы */
-    justify-content: center; /* Центрируем карточки */
-    gap: 20px; /* Отступы между карточками */
+    overflow-x: auto;  /* Горизонтальная прокрутка */
+    scroll-snap-type: x mandatory; /* Фиксируем прокрутку по одной карточке */
+    gap: 10px;
+    padding: 20px;
+    white-space: nowrap; /* Чтобы карточки шли в строку */
 }
 
+/* Карточки */
 .card {
-    width: 300px; /* Фиксированный размер */
-    height: auto;
+    flex: 0 0 100%; /* Каждая карточка занимает весь экран */
+    max-width: 400px; /* Ограничение ширины */
     text-align: center;
+    scroll-snap-align: center; /* Фиксируем прокрутку на каждую карточку */
 }
 
-/* Для мобильных устройств (до 768px ширины) */
+/* ДЛЯ МОБИЛЬНЫХ */
 @media screen and (max-width: 768px) {
     .cards-container {
-        flex-direction: row; /* Располагаем в одну линию */
-        overflow-x: auto; /* Добавляем прокрутку, если не влезает */
-        white-space: nowrap; /* Запрещаем перенос строк */
-    }
-    
-    .card {
-        flex: 0 0 auto; /* Фиксируем размер карточек */
+        scroll-behavior: smooth; /* Плавная прокрутка */
     }
 }
-
 .card:hover {
     transform: scale(1.05);
 }
