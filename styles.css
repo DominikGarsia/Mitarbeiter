@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+header {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s linear infinite;
+    padding: 20px;
+    font-size: 24px;
+    font-style: italic;
+    font-family: "Dancing Script";
+
+    
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h2 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #555;
+    font-size: 16px;
+}
+
+.resume img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
+}
+
+/* Стили для блока с иконками */
+.social-icons {
+    position: fixed; /* Фиксированное положение */
+    bottom: 20px; /* Отступ снизу */
+    right: 20px; /* Отступ справа */
+    display: flex;
+    flex-direction: column; /* Иконки вертикально */
+    gap: 15px; /* Расстояние между иконками */
+    font-size: 45px;
+}
+
+/* Стили для иконок */
+.social-icons a {
+    color: #fff; /* Цвет иконок */
+    background-color: #333; /* Фон иконок */
+    border-radius: 10%; /* Круглые иконки */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Убираем подчёркивание */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета */
+}
+
+/* Эффект при наведении на иконки */
+.social-icons a:hover {
+    background-color: #555; /* Цвет фона при наведении */
+}
+
+/* Цвета для иконок */
+.social-icons .fa-facebook { background-color: #1877f2; } /* Facebook */
+.social-icons .fa-instagram { background-color: #e4405f; } /* Instagram */
+.social-icons .fa-tinder { background-color: #ff6b6b; } /* Tinder */
