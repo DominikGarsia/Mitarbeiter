@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (container) {
         container.addEventListener("wheel", function (event) {
-            event.preventDefault(); // Отменяем стандартную вертикальную прокрутку
-            container.scrollLeft += event.deltaY; // Двигаем карточки влево/вправо
-        });
+            event.preventDefault();
+            const scrollSpeed = 50;
+            container.scrollLeft += event.deltaY * 0.5 * scrollSpeed; // Горизонтальный скролл вместо вертикального
+        }, { passive: false });
     }
 });
