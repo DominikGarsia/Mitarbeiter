@@ -38,15 +38,27 @@ header {
     margin: 20px;
 }
 
-/* Контейнер с карточками */
 .cards-container {
     display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;  /* Горизонтальная прокрутка */
-    scroll-behavior: auto;/*Плавная прокрутка*/
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Отступы между элементами */
+}
+
+#scrollLeft, #scrollRight {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
     padding: 10px;
-    white-space: nowrap; /* Чтобы карточки шли в строку */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#scrollLeft:hover, #scrollRight:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Карточки */
@@ -141,3 +153,24 @@ header {
 .social-icons .fa-facebook { background-color: #1877f2; } /* Facebook */
 .social-icons .fa-instagram { background-color: #e4405f; } /* Instagram */
 .social-icons .fa-tinder { background-color: #ff6b6b; } /* Tinder */
+
+#scrollLeft, #scrollRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+#scrollLeft {
+    left: 10px;
+}
+
+#scrollRight {
+    right: 10px;
+}
